@@ -22,7 +22,7 @@ const ProjectActions = ({ projectId }: Props) => {
 
     try {
       await deleteProject(projectId, token);
-
+      await fetch('/api/revalidate?path=/');
       router.push('/');
     } catch (error) {
       console.error(error);

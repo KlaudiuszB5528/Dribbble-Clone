@@ -3,13 +3,13 @@
 import { ProjectInterface, SessionInterface } from '@/common.types';
 import { createNewProject, fetchToken, updateProject } from '@/lib/actions';
 
-import { categoryFilters } from '@/constants';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 import Button from './Button';
 import CustomMenu from './CustomMenu';
 import FormField from './FormField';
+import Image from 'next/image';
+import { categoryFilters } from '@/constants';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 interface Props {
   type: string;
@@ -38,10 +38,12 @@ export default function ProjectForm({ type, session, project }: Props) {
     try {
       if (type === 'create') {
         await createNewProject(form, session?.user?.id, token);
-        router.push('/?path=/');
+        await fetch('/api/revalidate?path=/');
+        router.push('/');
       }
       if (type === 'edit') {
         await updateProject(form, project?.id as string, token);
+        await fetch('/api/revalidate?path=/');
         router.push('/');
       }
     } catch (error) {
