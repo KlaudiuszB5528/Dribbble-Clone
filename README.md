@@ -1,6 +1,6 @@
 # Dribbble-Clone
 
-Dribbble clone created to practise Next.js 13 along with Grafbase, NextAuth.js
+Dribbble clone created to practice Next.js 13 along with Grafbase, NextAuth.js
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -14,6 +14,10 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
+# to run grafbase
+npx grafbase dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
