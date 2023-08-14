@@ -29,3 +29,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Live Demo
 
 You can see the live demo [here](https://dribbble-clone-nu.vercel.app/)
+
+## Screenshots
+
+![Main Page](/github/1.png)
+![Create Project](/github/2.png)
+![Profile Page](/github/3.png)
+![Profile Page Menu Opened](/github/4.png)
